@@ -1,7 +1,7 @@
 # Lab1 Report
 
 ## 练习1：理解通过make生成执行文件的过程
-###练习1.1 操作系统镜像文件ucore.img是如何一步一步生成的？(需要比较详细地解释Makefile中每一条相关命令和命令参数的含义，以及说明命令导致的结果)
+### 练习1.1 操作系统镜像文件ucore.img是如何一步一步生成的？(需要比较详细地解释Makefile中每一条相关命令和命令参数的含义，以及说明命令导致的结果)
 
 在makefile中查找生成ucore.img的代码
 
@@ -104,6 +104,7 @@ b *0x7c00continuex /2i $pc
 
 在0x7c00处输入指令"x /10i pc"查看十条指令
 ![](pic/24.png "2.3")
+
 与boot/bootasm.S中的汇编代码对比
 
 ```
@@ -116,6 +117,7 @@ b *0x7c00continuex /2i $pc
 
 在tools/gdbinit中加入指令"break kern\_init"，运行make debug，得到的结果如图
 ![](pic/25.png)
+
 可以看到，程序在kern_init入口处停止，可以通过si命令单步调试。
 
 ## 练习3：分析bootloader进入保护模式的过程
