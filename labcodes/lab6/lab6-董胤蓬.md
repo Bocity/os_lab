@@ -188,7 +188,7 @@ kernel_execve: pid = 2, name = "priority".main: fork ok,now need to wait pids.
 可以看到，程序可以正常运行。
 
 ## 实现与参考答案的区别
-参考答案在时钟中断时没有调用`sched_class_proc_tick`，所以存在一定的问题。我的视线中通过`run_timer_list`接口实现了调用的功能。
+参考答案在时钟中断时没有调用`sched_class_proc_tick`，所以存在一定的问题。我的实现中通过`run_timer_list`接口实现了调用的功能。
 
 
 ## 列出你认为本实验中重要的知识点，以及与对应的OS原理中的知识点，并简要说明你对二者的含义，关系，差异等方面的理解（也可能出现实验中的知识点没有对应的原理知识点）
