@@ -48,5 +48,7 @@ void sched_init(void);
 void wakeup_proc(struct proc_struct *proc);
 void schedule(void);
 
-#endif /* !__KERN_SCHEDULE_SCHED_H__ */
+// Add this for trap program to call. For lab6 ONLY!
+void run_timer_list(struct proc_struct *proc);
 
+#endif /* !__KERN_SCHEDULE_SCHED_H__ */
